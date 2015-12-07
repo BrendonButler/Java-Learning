@@ -27,6 +27,14 @@ public class Test {
 
 		Beverage drink = new Beverage(size);
 
+		if (drink.getFillLevel() == 0) {
+			System.out.println("Your cup is currently empty!\nFilling...");
+
+			drink.fill();
+
+			System.out.printf("Your cup is now filled to, %s precent!\n", drink.getFillLevel());
+		}
+
 		System.out.printf("%s, we have made you a %s drink!\n", name, drink.getSize());
 
 		console.printf("\nGoodbye!\n");
