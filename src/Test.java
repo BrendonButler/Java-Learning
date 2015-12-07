@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 		console.printf("Hey look, it works!\n\n");
 
-		boolean emptyName = true, readyToExit = false;
+		boolean emptyName = true, readyToContinue = false;
 
 		String name, answer;
 
@@ -18,10 +18,14 @@ public class Test {
 		} while (emptyName);
 
 		do {
-			answer = console.readLine("Are you ready to exit, %s?\n> ", name);
+			answer = console.readLine("Are you ready to continue, %s?\n> ", name);
 
-			if (answer.equalsIgnoreCase("yes")) readyToExit = true;
-		} while (!readyToExit);
+			if (answer.equalsIgnoreCase("yes")) readyToContinue = true;
+		} while (!readyToContinue);
+
+		Beverage drink = new Beverage();
+
+		System.out.printf("%s, we have made you a %s drink!\n", name, drink.size);
 
 		console.printf("\nGoodbye!\n");
 
