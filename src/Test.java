@@ -1,6 +1,10 @@
+import java.io.Console;
+
 public class Test {
 
-    public static void main(String[] args) {
+    private static Console console = System.console();
 
+    public static void main(String[] args) {
+        console.printf("Hey look, it works!");
     }
 }
