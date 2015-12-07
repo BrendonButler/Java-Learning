@@ -6,5 +6,7 @@ public class Test {
 
     public static void main(String[] args) {
         console.printf("Hey look, it works!");
+
+		System.exit(0);
     }
 }
