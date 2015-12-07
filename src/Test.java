@@ -7,9 +7,9 @@ public class Test {
     public static void main(String[] args) {
         console.printf("Hey look, it works!\n\n");
 
-		boolean emptyName = true;
+		boolean emptyName = true, readyToExit = false;
 
-		String name;
+		String name, answer;
 
 		do {
 			name = console.readLine("What is your name?\n> ");
@@ -17,7 +17,13 @@ public class Test {
 			if (name != null) emptyName = false;
 		} while (emptyName);
 
-		console.printf("Are you ready to exit, %s?", name);
+		do {
+			answer = console.readLine("Are you ready to exit, %s?\n> ", name);
+
+			if (answer.equalsIgnoreCase("yes")) readyToExit = true;
+		} while (!readyToExit);
+
+		console.printf("\nGoodbye!\n");
 
 		System.exit(0);
     }
