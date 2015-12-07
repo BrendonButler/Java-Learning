@@ -3,5 +3,13 @@
  */
 public class Beverage {
 
-	public String size = "medium";
+	private String size = "medium";
+
+	public Beverage(String size) {
+		this.size = size;
+	}
+
+	public String getSize() {
+		return this.size;
+	}
 }

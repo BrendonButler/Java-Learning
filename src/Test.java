@@ -23,9 +23,11 @@ public class Test {
 			if (answer.equalsIgnoreCase("yes")) readyToContinue = true;
 		} while (!readyToContinue);
 
-		Beverage drink = new Beverage();
+		String size = console.readLine("How large of a drink would you like?\n>");
 
-		System.out.printf("%s, we have made you a %s drink!\n", name, drink.size);
+		Beverage drink = new Beverage(size);
+
+		System.out.printf("%s, we have made you a %s drink!\n", name, drink.getSize());
 
 		console.printf("\nGoodbye!\n");
 
